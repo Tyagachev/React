@@ -1,6 +1,6 @@
 import React from "react";
 
-import '../Message/Message.scss'
+import '../Message/Message.css'
 
 export const Message = (props) => {
 
