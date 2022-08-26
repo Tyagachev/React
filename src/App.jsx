@@ -1,12 +1,17 @@
-import {Message} from './Components/Message/Message.jsx'
+//import {Message} from './Components/Message/Message.jsx'
+import { MessageList } from './Components/MessageList/MessageList.jsx';
 
 import './App.css';
 
 export const App =()=> {
-  return (
 
+  return (
     <div className="App">
-      <Message text ='Какой-то текст переданный через props'/>
+        <form>
+          <input type="text" />
+          <button type="button">Отправить</button>
+        </form>
+      <MessageList/>
     </div>
     
   );
