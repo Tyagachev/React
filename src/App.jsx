@@ -2,7 +2,7 @@ import {Message} from './Components/Message/Message.jsx'
 
 import './App.css';
 
-function App() {
+export const App =()=> {
   return (
 
     <div className="App">
@@ -12,4 +12,3 @@ function App() {
   );
 }
 
-export default App;
