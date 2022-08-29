@@ -1,15 +1,32 @@
 import React from "react";
 
 export const MessageList= (formProps) => {
+    let arr1 = [1,2,3,4]
 
+console.log(formProps)
 
+console.log(arr1)
     return(
-        <>
-        <p>{formProps.userArray[0].autor}</p>
-        <p>{formProps.userArray[0].text}</p>
-            <ul>
+        
+        
+        <ul>{
 
+            arr1.map((el,idx)=>{
+                <li key={idx}>
+                    <p>{el[0]}</p>
+                </li>
+            })
+            /*
+            formProps.arr.map((el,idx)=>
+            <li key={idx}>
+                <p>{el.author}</p>
+                <p>{el.text}</p>
+            </li>
+
+            )*/
+
+            }
             </ul>
-        </>
+        
     )
 }
