@@ -1,19 +1,15 @@
 import React from "react";
 
-export const MessageList= (formProps) => {
+export const MessageList= ({messages}) => {
     
 
-console.log(formProps)
 
     return(
         
         
-        <ul>{
-
-
-
-            }
-            </ul>
+        <ul>
+            {messages.map((el,idx)=>{<li key={idx}>{el}</li>})}
+        </ul>
         
     )
 }
