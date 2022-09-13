@@ -17,10 +17,10 @@ export const Form = ({addMessage}) => {
         <div>
         <form onSubmit={handleSubmit}>
             <input 
-            type="text" 
-            value={text} 
-            onChange={(event)=>setText(event.target.value)}
-            />
+                type="text" 
+                value={text} 
+                onChange={(event)=>setText(event.target.value)}
+                />
             <button disabled={!text}>Отправить</button>
         </form>
         </div>
