@@ -13,7 +13,7 @@ export const App=()=> {
 const [messages,setMessages] = useState([])
 
 const addMessages = (newMessages) => {
-  setMessages([...messages,newMessages])
+  setMessages((prevMessages)=> [...prevMessages,newMessages])
 }
 
 useEffect(() => {
@@ -25,7 +25,6 @@ useEffect(() => {
     }); 
   },1000)
   }
-  console.log('test')
 },[messages])
 
 
