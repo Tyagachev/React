@@ -3,24 +3,26 @@ import userEvent from '@testing-library/user-event';
 import { Form } from './Form';
 
 describe('Form',()=> {
-
     it('render component', () => {
         render(<Form/>);
-        screen.debug();
     });
 
-    it('render component 1', () => {
+    it('type text in input', () => {
         render(<Form />);
-        expect(screen.getByRole('textbox')).toBeInTheDocument()
-        //userEvent.type(screen.getByRole('textbox'))
+        const textBox = screen.getByRole('textbox');
+        userEvent.type((textBox),'Привет');
     });
 
     it('renders button with send', () => {
         render(<Form />);
-        expect(screen.getByRole('button')).toBeInTheDocument()
-        expect(screen.getByRole('button').innerHTML).toBe('Отправить')
+        const buttonEl = screen.getByRole('button');
+        expect((buttonEl).innerHTML).toBe('Отправить');
+        expect((buttonEl).disabled).toBe(true);
+    });
+
+    it('click on the button', () => {
+        render(<Form />);
+        userEvent.click(screen.getByRole('button'));
     });
     
-    
-
 });

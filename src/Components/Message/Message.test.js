@@ -4,7 +4,7 @@ import { Message } from './Message';
 describe('Massage', ()=> {
     it('render Massage component', ()=> {
         render(<Message/>)
-        screen.debug();
-        expect(screen.getByText(/текст/)).toBeInTheDocument();
+        const textEl = screen.getByText(/текст/);
+        expect(textEl).toBeInTheDocument();
     });
 });
