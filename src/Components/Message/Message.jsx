@@ -4,7 +4,7 @@ import '../Message/Message.css'
 
 export const Message = (props) => {
 
-    const constText = 'Какой-то текст написаный в const'
+    const constText = "Какой-то текст написаный в const"
 
     return (
 

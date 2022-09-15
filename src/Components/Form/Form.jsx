@@ -18,7 +18,7 @@ export const Form = ({addMessage}) => {
         <form onSubmit={handleSubmit}>
             <input 
                 type="text" 
-                value={text} 
+                value={  text} 
                 onChange={(event)=>setText(event.target.value)}
                 />
             <button disabled={!text}>Отправить</button>
