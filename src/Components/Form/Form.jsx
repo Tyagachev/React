@@ -3,7 +3,6 @@ import { AUTHOR } from '../../constans';
 
 export const Form = ({ addMessage }) => {
   const [text, setText] = useState('');
-
   const handleSubmit = (ev) => {
     ev.preventDefault();
     addMessage({

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import { Message } from './Components/Message/Message.jsx';
 import { MessageList } from './Components/MessageList/MessageList.jsx';
 import { Form } from './Components/Form/Form.jsx';
 
 import './App.css';
-import { useEffect } from 'react';
 import { AUTHOR } from './constans.js';
 
 export const App = () => {
