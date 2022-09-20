@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { MessageList } from './Components/MessageList/MessageList.js';
-import { Form } from './Components/Form/Form.js';
-import { Message,Messages } from 'src/types'
+import { MessageList } from './Components/MessageList/MessageList';
+import { Form } from './Components/Form/Form';
+import { Message, Messages } from 'src/types';
 
 import './App.css';
-import { AUTHOR } from './constans.js';
+import { AUTHOR } from './constans';
 
 export const App = () => {
   const [messages, setMessages] = useState<Messages>([]);
