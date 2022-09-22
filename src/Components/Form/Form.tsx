@@ -28,7 +28,12 @@ export const Form: FC<FormProps> = ({ addMessage }) => {
           type="text"
           onChange={(event) => setText(event.target.value)}
         />
-        <MUIButton disabled={!text} variant="contained" type="submit">
+        <MUIButton
+          style={{ padding: 15, marginLeft: 5 }}
+          disabled={!text}
+          variant="contained"
+          type="submit"
+        >
           Отправить
         </MUIButton>
       </form>
