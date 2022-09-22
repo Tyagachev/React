@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { Message } from './Components/Message/Message.jsx';
-import { MessageList } from './Components/MessageList/MessageList.jsx';
-import { Form } from './Components/Form/Form.jsx';
+import { useEffect } from 'react';
+import { MessageList } from './Components/MessageList/MessageList';
+import { Form } from './Components/Form/Form';
+import { Message, Messages } from 'src/types';
 
 import './App.css';
-import { useEffect } from 'react';
-import { AUTHOR } from './constans.js';
+import { AUTHOR } from './constans';
 
 export const App = () => {
-  const [messages, setMessages] = useState([]);
+  const [messages, setMessages] = useState<Messages>([]);
 
-  const addMessages = (newMessages) => {
+  const addMessage = (newMessages: Message) => {
     setMessages((prevMessages) => [...prevMessages, newMessages]);
   };
 
@@ -20,7 +20,7 @@ export const App = () => {
       messages[messages.length - 1].author === AUTHOR.user
     ) {
       setTimeout(() => {
-        addMessages({
+        addMessage({
           author: AUTHOR.bot,
           text: 'Iam Bot',
         });
@@ -30,9 +30,8 @@ export const App = () => {
 
   return (
     <div className="App">
-      <Message text="Текст переданный через props" />
       <MessageList messages={messages} />
-      <Form addMessage={addMessages} />
+      <Form addMessage={addMessage} />
     </div>
   );
 };
